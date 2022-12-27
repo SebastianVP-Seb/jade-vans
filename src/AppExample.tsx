@@ -14,16 +14,14 @@ const App = () => {
         <Route path='/' element={
           <>
             <Header />
-            <div className='divContainer' >
-            {
-              CARD_CONTAINER.map(item=>(
-                <SelectPage key={item.text} text={item.text} imgUrl={item.imgUrl} />))
-            }
-            </div>
+            {/* <div className='divContainer' >
+              {CARD_CONTAINER.map(item=>(
+                <SelectPage key={item.text} text={item.text} imgUrl={item.imgUrl} />))}
+            </div> */}
             <Outlet />
           </>
-        } />
-        <Route path='/*' element={<VansRoutes />} >
+          } />
+          <Route path='/*' element={<VansRoutes />} >
         </Route>
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

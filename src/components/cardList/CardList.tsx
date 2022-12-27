@@ -1,15 +1,17 @@
 import React from 'react';
-import { dbTenisMan } from '../../db/tenisMan';
-import Card from '../card/Card';
+import CardItems from '../cardItems/CardItems';
+import './cardList.scss';
 
-const CardList = () => {
+interface ICardList {
+  items: any;
+};
+
+const CardList: React.FC<ICardList> = ({items}) => {
   return (
-    <div>
-      {
-        dbTenisMan.map((item)=>(
-          <Card {...item}/>
-        ))
-      }
+    <div className='cardList' >
+      {items.map((item: any)=>(
+          <CardItems key={item.id} item={item}  />
+        ))}
     </div>
   );
 };

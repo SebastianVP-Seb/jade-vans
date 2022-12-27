@@ -1,0 +1,24 @@
+.footer {
+    height: 4rem;
+    margin-top: .5rem;
+    background-color: crimson;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: bottom;
+    flex-direction: column;
+
+    &_link {
+        text-decoration: none;
+        color: white;
+        padding: .3rem;
+        background-color: rgba(0, 0, 0, 0.33);
+        border-radius: 3px;
+        box-shadow: 3px 3px 5px 0px rgba($color: #000000, $alpha: .3);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

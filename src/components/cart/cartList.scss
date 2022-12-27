@@ -1,0 +1,37 @@
+.cartList {
+    display: flex;
+    height: 7rem;
+    width: 100%;
+    margin: .5rem 0;
+
+    &_blocks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    &_img {
+        width: 7rem;
+        height: 100%;
+    }
+
+    &_info {
+        z-index: 1;
+        background-color: rgba(228, 228, 228, 0.243);
+        text-align: center;
+        margin-left: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: .5rem;
+        border-radius: 5px;
+
+        &-extra {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

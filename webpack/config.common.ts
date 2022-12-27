@@ -52,7 +52,7 @@ const pluginsWebpack: Array<WebpackPluginInstance> = [
 export const configCommonWebpack=(env: any, arg: any): webpack.Configuration=>{
 
     return {
-        entry: `${SRC_DIR}/index.ts`,
+        entry: `${SRC_DIR}/index.tsx`,
         output: {
             path: ROOT_DIST,//genera la ruta
             filename: 'index.[contenthash].js',//nombre del archivo de salida

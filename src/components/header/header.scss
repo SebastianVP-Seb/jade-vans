@@ -1,6 +1,18 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: .5rem 0;
+
+    &_shop {
+        height: 1.7rem;
+        width: 1.7rem;
+        color: black;
+    }
+
+    &_menu {
+        height: 1.7rem;
+        width: 1.7rem;
+        color: black;
+    }
 }
