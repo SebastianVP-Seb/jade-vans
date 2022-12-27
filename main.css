@@ -82,7 +82,7 @@ main {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/footer.scss ***!
   \****************************************************************************************************************************/
 .footer {
-  height: 4rem;
+  height: 3rem;
   margin-top: 0.5rem;
   background-color: crimson;
   width: 100%;
@@ -129,7 +129,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
 }
 .cardItems_item {
   width: 100%;
@@ -150,16 +149,18 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 0.5rem;
-  background-color: aqua;
 }
 /*!****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/card/cardGrid.scss ***!
   \****************************************************************************************************************************/
-.cardGrid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.cardGrid_imagesCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.5rem;
+}
+.cardGrid_imagesCard_imgGallery {
+  width: 100%;
+  height: 100%;
 }
 .cardGrid_btn {
   border: 1.5px black;
@@ -180,6 +181,12 @@ main {
 .cardGrid_img {
   width: 10rem;
   height: 10rem;
+}
+.cardGrid_infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /*!****************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cart/cartList.scss ***!
@@ -216,4 +223,26 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cart/emptyCart.scss ***!
+  \*****************************************************************************************************************************/
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.emptyCart_buttonCart {
+  margin-top: 1rem;
+  border: 1.5px black;
+  background-color: black;
+  color: whitesmoke;
+  padding: 12px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.emptyCart_buttonCart:hover:not(:disabled) {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
 }
