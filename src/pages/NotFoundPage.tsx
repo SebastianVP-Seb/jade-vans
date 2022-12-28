@@ -1,11 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link, useRouteError } from "react-router-dom";
 
 const NotFoundPage = () => {
+  const error = useRouteError();
+  console.log(error);
   return (
     <div>
-        <p>Esta dirección no está disponible, ir a la página de inicio</p>
-        <Link to='/jade-vans' >Volver</Link>
+      <p>Esta dirección no está disponible, ir a la página de inicio</p>
+      <Link to="/">Volver</Link>
     </div>
   );
 };

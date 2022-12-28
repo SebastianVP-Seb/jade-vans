@@ -12,10 +12,10 @@ const Header = () => {
     <>
       <div className='header'>
         <HiOutlineMenuAlt1 className='icon-react' />
-        <Link to='/jade-vans'>
+        <Link to='/'>
           <img src="https://vansmx.vtexassets.com/assets/vtex/assets-builder/vansmx.store-theme/2.1.72/vans_logo___f0e76da56209d821e62c3835c1269ca8.svg" alt="" />
         </Link>
-        <Link to='/jade-vans/cart' >
+        <Link to='cart' >
           {
             state.length>0 
               ? <HiShoppingBag className='icon-react' />

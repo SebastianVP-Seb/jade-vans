@@ -53,10 +53,17 @@ export const configCommonWebpack=(env: any, arg: any): webpack.Configuration=>{
 
     return {
         entry: `${SRC_DIR}/index.tsx`,
+        // output: {
+        //     path: path.resolve(__dirname, '../dist'),
+        //     filename: '[name].[contenthash].js',
+        //     clean: true,
+        //     publicPath: '/'
+        //   },
         output: {
             path: ROOT_DIST,//genera la ruta
             filename: 'index.[contenthash].js',//nombre del archivo de salida
             clean: true,//elimina lo que se tenga en la carpeta dist y lo crea nuevamente
+            publicPath: '/jade-vans'
         },
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx'],

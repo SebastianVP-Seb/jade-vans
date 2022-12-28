@@ -6,6 +6,7 @@ import './styles/index.scss';
 import router from './router/index';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { pathBase } from './constants/constans';
 
 ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,

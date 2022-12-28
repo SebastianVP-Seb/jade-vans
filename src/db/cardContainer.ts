@@ -1,20 +1,17 @@
-export interface ICardContainer {
-    imgUrl: string;
-    text: string;
-  };
+import { ICardContainer, IItemProduct } from '../interfaces/index';
 
 export const CARD_CONTAINER: Array<ICardContainer> = [
     {
         text: 'Dama',
-        imgUrl: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/zapatillas-vans-mujer-rebajadas-1615294916.jpg'
+        imgUrl: 'https://vansmx.vtexassets.com/arquivos/Vans_Lifestyle_Mujer.png'
     },
     {
         text: 'Caballero',
-        imgUrl: 'https://i.pinimg.com/originals/ae/99/2d/ae992d9a5b6d602458548b48e1233148.jpg'
+        imgUrl: 'https://www.sincable.mx/wp-content/uploads/2021/10/ZeC-SUN-Vans-para-hombre-0-harry-hundal-y9ctpaxexTI-unsplash-scaled-1300x1040.jpg'
     },
     {
         text: 'Infantil',
-        imgUrl: 'https://i.pinimg.com/564x/a5/5a/92/a55a927ad575d02dfaab8632efecfadf.jpg'
+        imgUrl: 'https://vansmx.vtexassets.com/arquivos/Vans_Lifestyle_Nino.png'
     }
 ];
 
@@ -43,7 +40,7 @@ export const itemsCaballero = [
 export const itemsInfantil = [
     {
       text: 'Ropa',
-      imgUrl: 'https://vansmx.vtexassets.com/arquivos/ids/941695-800-auto?v=638066056495670000&width=800&height=auto&aspect=true'
+      imgUrl: 'https://vansmx.vtexassets.com/arquivos/ids/977957-800-auto?v=638076703603070000&width=800&height=auto&aspect=true'
     },
     {
       text: 'Calzado',

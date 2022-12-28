@@ -1,6 +1,6 @@
 import React from 'react';
-import { ICardContainer } from '../../db/cardContainer';
 import { Link } from 'react-router-dom';
+import { ICardContainer } from '../../interfaces/index';
 
 const CardContainer: React.FC<ICardContainer> = ({imgUrl, text}) => {
   return (

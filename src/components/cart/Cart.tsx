@@ -2,6 +2,7 @@ import React from "react";
 import CartList from "./CartList";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/index";
+import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
   const state = useSelector((state: RootState) => state.cart);
@@ -14,11 +15,17 @@ const Cart = () => {
 
   return (
     <div>
-      <p>Toma captura a esta lista de productos y solicita información (:</p>
+      {/* <p>Toma captura a esta lista de productos y solicita información (:</p> */}
       <div className="cart_list">
-        {state.map((item: any) => (
+        {
+          state.length > 0 
+            ? (
+              state.map((item: any) => (
           <CartList key={item} item={item} />
-        ))}
+        ))
+            )
+          : (<EmptyCart />)
+        }
       </div>
     </div>
   );

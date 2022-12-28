@@ -1,10 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IItemProduct } from '../../interfaces/index';
 
-// export interface CounterState {
-//   value: number
-// }
-
-const initialState: any = [];
+const initialState: Array<IItemProduct> = [];
 // export let arrayStorage: any = JSON.parse(localStorage.getItem("cart-vans"));
 // const initialState = localStorage.getItem('cart-vans');
 export const counterSlice = createSlice({
@@ -12,13 +9,12 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     increment: (state, action) => {
-      //item completo
       state.push(action.payload);
       const itemFound = state.find((item: any) => item.id === action.payload.id);
+      console.log(itemFound);
       if (itemFound) {
         itemFound.added = true;
         console.log(itemFound)
-        // console.log(item)
       // arrayStorage.push(
       //   localStorage.setItem("cart-vans", JSON.stringify(action.payload))
       // );
@@ -26,19 +22,19 @@ export const counterSlice = createSlice({
     },
     decrement: (state, action) => {
       // state.filter((item: any)=>item.id!=action.payload)
-      console.log(action.payload.added)
+      // console.log(action.payload)
       const itemFound = state.find((item: any) => item.id === action.payload.id);
-      // let nuevoItem;
+      console.log({state, action, itemFound});
+      
       // state.map((item:any)=>item.id == action.payload.id ? nuevoItem=item : item)
-      // console.log(nuevoItem)
-      console.log(state)
       // state.find((item:any)=>(item.id === action.payload.id) ? item.added = false : item)
-      if (itemFound) {
-        itemFound.added = false;
-        console.log(action.payload.added)
-        state.splice(state.indexOf(itemFound), 1);
-        // localStorage.removeItem('cart-vans');
-      }
+      // if (itemFound) {
+      //   console.log(action.payload.added)
+      //   itemFound.added = true;
+      //   state.splice(state.indexOf(itemFound), 1);
+      //   console.log(itemFound)
+      //   // localStorage.removeItem('cart-vans');
+      // }
     },
   },
 });

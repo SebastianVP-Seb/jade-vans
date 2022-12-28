@@ -1,15 +1,19 @@
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 import { decrement } from "../../store/reducers/cartSlice";
 import "./cartList.scss";
+import { RootState } from '../../store/index';
 
 const CartList = ({ item }: any) => {
+  console.log(item)
   const dispatch = useDispatch();
+  // const store = useSelector((state: RootState) => state.cart);
 
-  const removeItem = (id: any) => {
-    dispatch(decrement(id));
-    // localStorage.removeItem('cart-vans');
+
+  const handleRemove = (item: any) => {
+    dispatch(decrement(item));
+    // localStorage.handleRemove('cart-vans');
   };
 
   return (
@@ -18,7 +22,7 @@ const CartList = ({ item }: any) => {
       <div className="cartList_blocks">
         <AiOutlineDelete
           className="icon-react_delete"
-          onClick={() => removeItem(item)}
+          onClick={() => handleRemove(item)}
         />
         <div className="cartList_info">
           <h4>{item.name}</h4>

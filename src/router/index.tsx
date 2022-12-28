@@ -1,97 +1,124 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import { itemsCaballero, itemsDama, itemsInfantil } from '../db/cardContainer';
-import Layout from '../layout/Layout';
-import NotFoundPage from '../pages/NotFoundPage';
-import SelectPage from '../components/selectPage/SelectPage';
-import CardContainer from '../components/cardContainer/CardContainer';
-import CardList from '../components/cardList/CardList';
-import Card from '../components/card/Card';
-import { dbTenisMan, dbClothesWoman, dbTenisWoman, dbClothesMan, dbClothesChild, dbTenisChild } from '../db/tenisMan';
-import Cart from '../components/cart/Cart';
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
+import { itemsCaballero, itemsDama, itemsInfantil } from "../db/cardContainer";
+import Layout from "../layout/Layout";
+import NotFoundPage from "../pages/NotFoundPage";
+import SelectPage from "../components/selectPage/SelectPage";
+import CardContainer from "../components/cardContainer/CardContainer";
+import CardList from "../components/cardList/CardList";
+import Card from "../components/card/Card";
+import {
+  dbTenisMan,
+  dbClothesWoman,
+  dbTenisWoman,
+  dbClothesMan,
+  dbClothesChild,
+  dbTenisChild,
+} from "../db/tenisMan";
+import Cart from "../components/cart/Cart";
 
-const router = createBrowserRouter([
+const routes = [
   {
-    path: '/jade-vans/',
+    path: "/",
     element: <Layout />,
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: '/jade-vans/cart',
-        element: <Cart />
-      },
-      {
-        path: '/jade-vans/',
+        index: true,
         element: <SelectPage />,
+        errorElement: <NotFoundPage />,
+      },
+      
+      {
+        path: "cart",
+        errorElement: <NotFoundPage />,
+        element: <Cart />,
       },
       {
-        path: '/jade-vans/Dama',
-        element: (
-          itemsDama.map((item)=><CardContainer text={item.text} imgUrl={item.imgUrl} />)
-        ),
+        path: "Dama",
+        errorElement: <NotFoundPage />,
+        element: itemsDama.map((item) => (
+          <CardContainer key={item.imgUrl} text={item.text} imgUrl={item.imgUrl} />
+        ))
       },
       {
-        path: '/jade-vans/Dama/ropa',
-        element: (<CardList items={dbClothesWoman} />),
+        path: "Dama/ropa",
+        errorElement: <NotFoundPage />,
+        element: <CardList items={dbClothesWoman} />,
       },
       {
-        path: '/jade-vans/Dama/ropa/:id',
-        element: <Card  />
-      },
-      {
-        path: '/jade-vans/Dama/calzado',
-        element: <CardList items={dbTenisWoman} />,
-      },
-      {
-        path: '/jade-vans/Dama/calzado/:id',
-        element: <Card />
-      },
-      {
-        path: '/jade-vans/Caballero',
-        element: (
-          itemsCaballero.map((item)=><CardContainer text={item.text} imgUrl={item.imgUrl} />)
-        ),
-      },
-      {
-        path: '/jade-vans/Caballero/ropa',
-        element: <CardList items={dbClothesMan} />,
-      },
-      {
-        path: '/jade-vans/Caballero/ropa/:id',
-        element: <Card />
-      },
-      {
-        path: '/jade-vans/Caballero/calzado',
-        element: <CardList items={dbTenisMan} />,
-      },
-      {
-        path: '/jade-vans/Caballero/calzado/:id',
-        element: <Card />
-      },
-      {
-        path: '/jade-vans/Infantil',
-        element: (
-          itemsInfantil.map((item)=><CardContainer text={item.text} imgUrl={item.imgUrl} />)
-        ),
-      },
-      {
-        path: '/jade-vans/Infantil/ropa',
-        element: <CardList items={dbClothesChild} />,
-      },
-      {
-        path: '/jade-vans/Infantil/ropa/:id',
+        path: "Dama/ropa/:id",
+        errorElement: <NotFoundPage />,
         element: <Card />,
       },
       {
-        path: '/jade-vans/Infantil/calzado',
+        path: "Dama/calzado",
+        errorElement: <NotFoundPage />,
+        element: <CardList items={dbTenisWoman} />,
+      },
+      {
+        path: "Dama/calzado/:id",
+        errorElement: <NotFoundPage />,
+        element: <Card />,
+      },
+      {
+        path: "Caballero",
+        errorElement: <NotFoundPage />,
+        element: itemsCaballero.map((item) => (
+          <CardContainer key={item.imgUrl} text={item.text} imgUrl={item.imgUrl} />
+        )),
+      },
+      {
+        path: "Caballero/ropa",
+        errorElement: <NotFoundPage />,
+        element: <CardList items={dbClothesMan} />,
+      },
+      {
+        path: "Caballero/ropa/:id",
+        errorElement: <NotFoundPage />,
+        element: <Card />,
+      },
+      {
+        path: "Caballero/calzado",
+        errorElement: <NotFoundPage />,
+        element: <CardList items={dbTenisMan} />,
+      },
+      {
+        path: "Caballero/calzado/:id",
+        errorElement: <NotFoundPage />,
+        element: <Card />,
+      },
+      {
+        path: "Infantil",
+        errorElement: <NotFoundPage />,
+        element: itemsInfantil.map((item) => (
+          <CardContainer key={item.imgUrl} text={item.text} imgUrl={item.imgUrl} />
+        )),
+      },
+      {
+        path: "Infantil/ropa",
+        errorElement: <NotFoundPage />,
+        element: <CardList items={dbClothesChild} />,
+      },
+      {
+        path: "Infantil/ropa/:id",
+        errorElement: <NotFoundPage />,
+        element: <Card />,
+      },
+      {
+        path: "Infantil/calzado",
+        errorElement: <NotFoundPage />,
         element: <CardList items={dbTenisChild} />,
       },
       {
-        path: '/jade-vans/Infantil/calzado/:id',
-        element: <Card />
+        path: "Infantil/calzado/:id",
+        errorElement: <NotFoundPage />,
+        element: <Card />,
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, { basename: "/jade-vans" });
 
 export default router;
