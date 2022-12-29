@@ -1,10 +1,248 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \****************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
-*{padding:0%;margin:0;box-sizing:border-box}main{margin:.5rem}.divContainer{display:grid;gap:.5rem}.divContainer .background-image{overflow:hidden;width:100%;height:100%;background-position:bottom;background-size:cover;overflow:hidden}.divContainer .background-image:hover{cursor:pointer;transform:scale(1.05);transition:transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95)}.divContainer-item{display:flex;align-items:center;justify-content:center;text-decoration:none;border-radius:3px;height:12rem;width:100%;transition:all .5s;color:#fff;font-size:1.8rem}.divContainer-item:hover{background-color:rgba(0,0,0,.455)}.background-image-card{display:flex;justify-content:center;align-items:center;overflow:hidden;width:100%;color:#fff;height:15rem;background-position:bottom;background-size:cover;background-image:radial-gradient(rgb(188, 86, 86), rgb(59, 155, 97));overflow:hidden;margin-bottom:.5rem}.background-image-card:hover{cursor:pointer;transform:scale(1.05);transition:transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95)}.icon-react{height:1.7rem;width:1.7rem;color:#000}.icon-react_delete{height:1.3rem;width:1.3rem;right:0}
-.footer{height:3rem;margin-top:.5rem;background-color:crimson;width:100%;display:flex;justify-content:center;align-items:center;position:bottom;flex-direction:column}.footer_link{text-decoration:none;color:#fff;padding:.3rem;background-color:rgba(0,0,0,.33);border-radius:3px;box-shadow:3px 3px 5px 0px rgba(0,0,0,.3)}.footer_link:hover{cursor:pointer}
-.header{display:flex;align-items:center;justify-content:space-evenly;margin:.5rem 0}.header_shop{height:1.7rem;width:1.7rem;color:#000}.header_menu{height:1.7rem;width:1.7rem;color:#000}
-.cardItems{display:flex;justify-content:center;align-items:center}.cardItems_item{width:100%;height:100%;box-shadow:3px 3px 5px 0px rgba(0,0,0,.3)}
-.divContainer{display:grid;gap:.5rem}
-.cardList{display:grid;grid-template-columns:repeat(auto-fill, minmax(10rem, 1fr));gap:.5rem}
-.cardGrid_imagesCard{display:grid;grid-template-columns:repeat(auto-fill, minmax(10rem, 1fr));gap:.5rem}.cardGrid_imagesCard_imgGallery{width:100%;height:100%}.cardGrid_btn{border:1.5px #000;background-color:#000;color:#f5f5f5;padding:12px;border-radius:5px;transition:all .5s}.cardGrid_btn:hover:not(:disabled){box-shadow:3px 3px 5px 0px rgba(0,0,0,.3);transform:translateY(-3px)}.cardGrid_btn:disabled{background-color:#f8f8ff;color:gray}.cardGrid_img{width:10rem;height:10rem}.cardGrid_infoCard{display:flex;flex-direction:column;align-items:center;justify-content:center}
-.cartList{display:flex;height:7rem;width:100%;margin:.5rem 0}.cartList_blocks{display:flex;flex-direction:column;width:100%;justify-content:space-evenly}.cartList_img{width:7rem;height:100%}.cartList_info{z-index:1;background-color:rgba(228,228,228,.243);text-align:center;margin-left:.5rem;display:flex;flex-direction:column;justify-content:space-between;padding:.5rem;border-radius:5px}.cartList_info-extra{display:flex;flex-direction:column;justify-content:center;align-items:center}
-.emptyCart{display:flex;justify-content:center;align-items:center;flex-direction:column}.emptyCart_buttonCart{margin-top:1rem;border:1.5px #000;background-color:#000;color:#f5f5f5;padding:12px;border-radius:5px;transition:all .5s}.emptyCart_buttonCart:hover:not(:disabled){box-shadow:3px 3px 5px 0px rgba(0,0,0,.3);transform:translateY(-3px)}
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss (1) ***!
+  \********************************************************************************************************************/
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0.5rem;
+}
+
+.divContainer {
+  display: grid;
+  gap: 0.5rem;
+}
+.divContainer .background-image {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+.divContainer .background-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+.divContainer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 3px;
+  height: 12rem;
+  width: 100%;
+  transition: all 0.5s;
+  color: white;
+  font-size: 1.8rem;
+}
+.divContainer-item:hover {
+  background-color: rgba(0, 0, 0, 0.455);
+}
+
+.background-image-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  height: 15rem;
+  background-position: bottom;
+  background-size: cover;
+  background-image: radial-gradient(rgb(188, 86, 86), rgb(59, 155, 97));
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.background-image-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.icon-react {
+  height: 1.7rem;
+  width: 1.7rem;
+  color: black;
+}
+.icon-react_delete {
+  height: 1.3rem;
+  width: 1.3rem;
+  right: 0;
+}
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/footer/footer.scss ***!
+  \****************************************************************************************************************************/
+.footer {
+  height: 3rem;
+  margin-top: 0.5rem;
+  background-color: crimson;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: bottom;
+  flex-direction: column;
+}
+.footer_link {
+  text-decoration: none;
+  color: white;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.33);
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.footer_link:hover {
+  cursor: pointer;
+}
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss ***!
+  \****************************************************************************************************************************/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0.5rem 0;
+}
+.header_shop {
+  height: 1.7rem;
+  width: 1.7rem;
+  color: black;
+}
+.header_menu {
+  height: 1.7rem;
+  width: 1.7rem;
+  color: black;
+}
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cardItems/cardItems.scss ***!
+  \**********************************************************************************************************************************/
+.cardItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardItems_item {
+  width: 100%;
+  height: 100%;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/selectPage/selectPage.scss ***!
+  \************************************************************************************************************************************/
+.divContainer {
+  display: grid;
+  gap: 0.5rem;
+}
+/*!********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cardList/cardList.scss ***!
+  \********************************************************************************************************************************/
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.5rem;
+}
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/card/cardGrid.scss ***!
+  \****************************************************************************************************************************/
+.cardGrid_imagesCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.5rem;
+}
+.cardGrid_imagesCard_imgGallery {
+  width: 100%;
+  height: 100%;
+}
+.cardGrid_btn {
+  border: 1.5px black;
+  background-color: black;
+  color: whitesmoke;
+  padding: 12px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.cardGrid_btn:hover:not(:disabled) {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+.cardGrid_btn:disabled {
+  background-color: ghostwhite;
+  color: gray;
+}
+.cardGrid_img {
+  width: 10rem;
+  height: 10rem;
+}
+.cardGrid_infoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cart/cartList.scss ***!
+  \****************************************************************************************************************************/
+.cartList {
+  display: flex;
+  height: 7rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.cartList_blocks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.cartList_img {
+  width: 7rem;
+  height: 100%;
+}
+.cartList_info {
+  z-index: 1;
+  background-color: rgba(228, 228, 228, 0.243);
+  text-align: center;
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.cartList_info-extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cart/emptyCart.scss ***!
+  \*****************************************************************************************************************************/
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.emptyCart_buttonCart {
+  margin-top: 1rem;
+  border: 1.5px black;
+  background-color: black;
+  color: whitesmoke;
+  padding: 12px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.emptyCart_buttonCart:hover:not(:disabled) {
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
