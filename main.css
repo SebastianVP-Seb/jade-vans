@@ -112,15 +112,22 @@ main {
   justify-content: space-evenly;
   margin: 0.5rem 0;
 }
-.header_shop {
-  height: 1.7rem;
-  width: 1.7rem;
-  color: black;
+.header_bag {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
-.header_menu {
-  height: 1.7rem;
-  width: 1.7rem;
-  color: black;
+.header_bag-pNumber {
+  width: 1.3rem;
+  height: 1.3rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(245, 13, 13, 0.281);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*!**********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/cardItems/cardItems.scss ***!
