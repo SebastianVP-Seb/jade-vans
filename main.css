@@ -170,6 +170,7 @@ main {
   height: 100%;
 }
 .cardGrid_btn {
+  margin-top: 0.5rem;
   border: 1.5px black;
   background-color: black;
   color: whitesmoke;
@@ -178,6 +179,7 @@ main {
   transition: all 0.5s;
 }
 .cardGrid_btn:hover:not(:disabled) {
+  cursor: pointer;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
   transform: translateY(-3px);
 }
