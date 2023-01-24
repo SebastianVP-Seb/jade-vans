@@ -5,7 +5,8 @@ import { RootState } from "../../store/index";
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
-  const state = useSelector((state: RootState) => state.cart);
+  const {cartItems} = useSelector((state: RootState) => state.cart);
+  // console.log(cartItems)
 //   const cat = localStorage.getItem('cart-vans');
 // //   console.log(cat)
 //     let cartLocalStorage=[];
@@ -18,9 +19,9 @@ const Cart = () => {
       {/* <p>Toma captura a esta lista de productos y solicita información (:</p> */}
       <div className="cart_list">
         {
-          state.length > 0 
+          cartItems.length > 0 
             ? (
-              state.map((item: any) => (
+              cartItems.map((item: any) => (
           <CartList key={item} item={item} />
         ))
             )

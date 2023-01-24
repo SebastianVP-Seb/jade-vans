@@ -8,7 +8,7 @@ const EmptyCart: React.FC = () => {
     <div className='emptyCart'>
         <img src={ImagenCart} alt='Empty bag' />
         <p>Tu bolsa está vacía</p>
-        <Link to='/' >
+        <Link to='/jade-vans' >
             <button className='emptyCart_buttonCart' >Añadir artículos</button>
         </Link>
     </div>

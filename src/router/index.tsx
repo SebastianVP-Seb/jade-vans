@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import { itemsCaballero, itemsDama, itemsInfantil } from "../db/cardContainer";
 import Layout from "../layout/Layout";
 import NotFoundPage from "../pages/NotFoundPage";
@@ -19,7 +19,11 @@ import Cart from "../components/cart/Cart";
 
 const routes = [
   {
-    path: "/",
+    path: '/',
+    element: <SelectPage />
+  },
+  {
+    path: "/jade-vans",
     element: <Layout />,
     errorElement: <NotFoundPage />,
     children: [
@@ -28,7 +32,6 @@ const routes = [
         element: <SelectPage />,
         errorElement: <NotFoundPage />,
       },
-      
       {
         path: "cart",
         errorElement: <NotFoundPage />,
@@ -119,6 +122,8 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, { basename: "/jade-vans" });
+const router = createBrowserRouter(routes, { basename: "/" });
+// const router = createHashRouter(routes, { basename: "/" });
+
 
 export default router;

@@ -4,15 +4,22 @@
     justify-content: space-evenly;
     margin: .5rem 0;
 
-    &_shop {
-        height: 1.7rem;
-        width: 1.7rem;
-        color: black;
-    }
+    &_bag {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
 
-    &_menu {
-        height: 1.7rem;
-        width: 1.7rem;
-        color: black;
+        &-pNumber {
+            width: 1.3rem;
+            height: 1.3rem;
+            border: none;
+            border-radius: 1rem;
+            background-color: rgba(245, 13, 13, 0.281);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

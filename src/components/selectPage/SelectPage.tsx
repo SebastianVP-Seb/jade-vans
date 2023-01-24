@@ -7,7 +7,7 @@ const SelectPage: React.FC = () => {
     <div className='divContainer'>
       {CARD_CONTAINER?.map(item=>(
       <div key={item.text} style={{backgroundImage: `url(${item.imgUrl})`}} className='background-image'>
-        <Link to={item.text} className='divContainer-item'>{item.text}</Link>
+        <Link to={`/jade-vans/${item.text}`} className='divContainer-item'>{item.text}</Link>
       </div>))}
     </div>
   );

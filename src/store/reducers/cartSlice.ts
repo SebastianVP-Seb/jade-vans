@@ -1,45 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { rootArray } from "../../db/tenisMan";
 import { IItemProduct } from '../../interfaces/index';
 
-const initialState: Array<IItemProduct> = [];
-// export let arrayStorage: any = JSON.parse(localStorage.getItem("cart-vans"));
-// const initialState = localStorage.getItem('cart-vans');
-export const counterSlice = createSlice({
-  name: "counter",
+interface IInitialState {
+  totalProducts: Array<IItemProduct>,
+  cartItems: Array<IItemProduct>,
+  total: number,
+};
+
+const initialState: IInitialState = {
+  totalProducts: rootArray,
+  cartItems: [],
+  total: 0,
+};
+
+export const cartSlice = createSlice({
+  name: "cart",
   initialState,
   reducers: {
     increment: (state, action) => {
-      state.push(action.payload);
-      const itemFound = state.find((item: any) => item.id === action.payload.id);
-      console.log(itemFound);
-      if (itemFound) {
-        itemFound.added = true;
-        console.log(itemFound)
-      // arrayStorage.push(
-      //   localStorage.setItem("cart-vans", JSON.stringify(action.payload))
-      // );
-      }
+      const itemAdded = action.payload;
+      state.cartItems.push(itemAdded);
+      const itemIdAdded = state.totalProducts.find(item =>  item.id === action.payload.id);
+      // itemIdAdded.added = true;
     },
     decrement: (state, action) => {
-      // state.filter((item: any)=>item.id!=action.payload)
-      // console.log(action.payload)
-      const itemFound = state.find((item: any) => item.id === action.payload.id);
-      console.log({state, action, itemFound});
-      
-      // state.map((item:any)=>item.id == action.payload.id ? nuevoItem=item : item)
-      // state.find((item:any)=>(item.id === action.payload.id) ? item.added = false : item)
-      // if (itemFound) {
-      //   console.log(action.payload.added)
-      //   itemFound.added = true;
-      //   state.splice(state.indexOf(itemFound), 1);
-      //   console.log(itemFound)
-      //   // localStorage.removeItem('cart-vans');
-      // }
+      const itemDeleted = action.payload;
+      state.cartItems = state.cartItems.filter(item=>item.id !== itemDeleted.id);
+      const itemIdDeleted = state.totalProducts.find(item =>  item.id === action.payload.id);
+      // itemIdDeleted.added = false;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement } = cartSlice.actions;
 
-export default counterSlice.reducer;
+export default cartSlice.reducer;
